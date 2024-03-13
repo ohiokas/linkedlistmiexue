@@ -35,3 +35,23 @@ def tampilkan_pesanan(self):
             total += current.harga
             current = current.next
         return total
+# Menu Miexue dan Harganya
+menu_miexue = {
+    "Miexue Ice Cream": 5000,
+    "Boba Shake": 16000,
+    "Mi Sundae": 14000,
+    "Mi Ganas": 11000,
+    "Creamy Mango Boba": 22000
+}
+
+# Membuat instance dari linked list
+keranjang = LinkedList()
+
+# Contoh penggunaan
+keranjang.tambah_pesanan("Miexue Ice Cream", menu_miexue["Miexue Ice Cream"])
+keranjang.tambah_pesanan("Mi Ganas", menu_miexue["Mi Ganas"])
+print("miexue ice cream sudah ditambahkan ke keranjang")
+print("mi ganas sudah ditambahkan ke keranjang")
+
+keranjang.tampilkan_pesanan()
+print(f"Total biaya yang harus dibayarkan adalah {keranjang.total_harga()} rupiah, terimakasih sudah memesan")
