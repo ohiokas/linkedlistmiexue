@@ -17,3 +17,21 @@ class LinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+def tampilkan_pesanan(self):
+        current = self.head
+        if not current:
+            print("Keranjang masih kosong")
+        else:
+            index = 1
+            while current:
+                print(f"{index}. {current.menu} {current.harga} rupiah")
+                current = current.next
+                index += 1
+
+    def total_harga(self):
+        current = self.head
+        total = 0
+        while current:
+            total += current.harga
+            current = current.next
+        return total
